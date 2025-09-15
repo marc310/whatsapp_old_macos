@@ -1,0 +1,32 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  -webkit-user-select: none;
+}
+
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: white;
+  height: 30px;
+  padding: 0 10px;
+  -webkit-app-region: drag; /* permite arrastar a janela */
+}
+
+.titlebar .buttons button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  margin-left: 5px;
+  cursor: pointer;
+  -webkit-app-region: no-drag; /* botões não arrastam */
+}
+
+.titlebar .buttons button:hover {
+  background: rgba(255,255,255,0.2);
+}

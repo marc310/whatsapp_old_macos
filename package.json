@@ -1,0 +1,28 @@
+{
+  "name": "Whatsapp",
+  "version": "1.0.0",
+  "description": "App webview for whatsapp. build on mojave for unsuported mac os",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "build": "electron-builder",
+    "pack": "electron-packager . --overwrite --platform=all --arch=all --prune=true --out=release-builds"
+  },
+  "build": {
+    "appId": "com.codex.Whatsapp",
+    "productName": "Whatsapp Desktop",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": "dmg"
+    }
+  },
+  "devDependencies": {
+    "electron": "^22.3.27",
+    "electron-builder": "^26.0.12",
+    "nodemon": "^3.0.2"
+  }
+}
